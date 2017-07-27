@@ -8,16 +8,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- build:css css/app.min.css -->
+  <link rel="stylesheet" href="libs/mediaelementjs/mediaelementplayer.min.css">
+  <link rel="stylesheet" href="libs/mediaelementjs_plugin/quality/quality.css">
+  <link rel="stylesheet" href="libs/mediaelementjs_plugin/skip-back/skip-back.css">
+  <link rel="stylesheet" href="libs/mediaelementjs_plugin/jump-forward/jump-forward.css">
+  <link rel="stylesheet" href="libs/mediaelementjs_plugin/speed/speed.min.css">
   <link rel="stylesheet" href="css/app.css">
   <!-- endbuild -->
 </head>
 
 <body>
 
+  <h1>Interactive Video Player</h1>
 
+  <div class="videoWrapper">
+    <video width=600 height=400 controls class="video-player" poster="img/poster.jpg" loop>
+      <source src="video/video_720p.mp4" type="video/mp4" data-quality="720p">
+      <source src="video/video_480p.mp4" type="video/mp4" data-quality="480p">
+      <source src="video/video_360p.mp4" type="video/mp4" data-quality="360p">
+      <track label="English" kind="subtitles" srclang="en" src="video/captions_english.vtt" default>
+      <track label="German" kind="subtitles" srclang="ger" src="video/captions_german.vtt">
+      <track label="Arabic" kind="subtitles" srclang="en" src="video/captions_arabic.vtt">
+    </video>
+  </div>
+
+  <p>Original video source: <a href="https://www.youtube.com/watch?v=-5wpm-gesOY">The Problem with Time &amp; Timezones</a> by <a href="https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA">Computerphille</a>.</p>
 
   <!-- build:js js/app.min.js -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="libs/mediaelementjs/mediaelement-and-player.min.js"></script>
+  <script src="libs/mediaelementjs_plugin/speed/speed.min.js"></script>
+  <script src="libs/mediaelementjs_plugin/skip-back/skip-back.min.js"></script>
+  <script src="libs/mediaelementjs_plugin/jump-forward/jump-forward.min.js"></script>
+  <script src="libs/mediaelementjs_plugin/quality/quality.min.js"></script>
   <script src="js/app.js"></script>
   <!-- endbuild -->
 </body>
