@@ -1,0 +1,642 @@
+WEBVTT
+
+1
+00:00:00,420 --> 00:00:04,820
+Sooner or later, every programmer has to deal with time zones.
+
+2
+00:00:04,839 --> 00:00:09,780
+And I can't really offer much advice here; I can offer a cautionary tale.
+
+3
+00:00:09,779 --> 00:00:16,600
+I can tell you why you really should never, ever deal with time zones if you can help it.
+
+4
+00:00:18,440 --> 00:00:21,560
+Let's imagine that someone has built an application
+
+5
+00:00:21,559 --> 00:00:25,919
+that lets you calculate how many seconds something is in the past.
+
+6
+00:00:25,920 --> 00:00:29,500
+You type in a date and a time, it gives you the number of seconds.
+
+7
+00:00:29,500 --> 00:00:32,859
+And they look at that and think "OK, that kind of works for me..."
+
+8
+00:00:32,859 --> 00:00:36,159
+"But let's add a little box that lets you change the time zone"
+
+9
+00:00:36,159 --> 00:00:44,619
+So if you're comparing between now in New York and five days ago in London, you can work that out.
+
+10
+00:00:44,619 --> 00:00:50,780
+And that's fine - the little drop down lets you change which hour forward or backward of Greenwich you are.
+
+11
+00:00:50,780 --> 00:00:51,620
+Brilliant.
+
+12
+00:00:51,619 --> 00:00:56,239
+Sooner or later, after it gets a bit popular, they'll get a call from Australia.
+
+13
+00:00:56,240 --> 00:00:58,020
+And Australia will say "G'day ma--"
+
+14
+00:00:58,020 --> 00:01:00,359
+-- I'm not gonna try and do accents.
+
+15
+00:01:00,359 --> 00:01:02,359
+I just shouldn't do accents.
+
+16
+00:01:02,359 --> 00:01:04,679
+Australia will say "Hello!"
+
+17
+00:01:04,680 --> 00:01:09,640
+"By the way, we're 9½ hours ahead of Greenwich."
+
+18
+00:01:09,640 --> 00:01:11,640
+And the programmer will go "really?"
+
+19
+00:01:11,640 --> 00:01:13,079
+"Yeah, 9½ hours."
+
+20
+00:01:13,079 --> 00:01:16,019
+"OK, I'll add a special case for you. That's fine."
+
+21
+00:01:16,019 --> 00:01:18,799
+A little bit later, someone will call from Nepal.
+
+22
+00:01:18,799 --> 00:01:24,179
+And they'll say "Hello. We're 5¼ hours ahead of Greenwich."
+
+23
+00:01:24,180 --> 00:01:28,580
+And they'll say "really?" "Yeah we've been that for ages! Yeah 5¼ hours!"
+
+24
+00:01:28,579 --> 00:01:31,899
+Great. Okay. And they'll put in a special case. And maybe they'll look up
+
+25
+00:01:31,900 --> 00:01:35,760
+the list of time zones. The Canonical list that tells you
+
+26
+00:01:35,760 --> 00:01:40,400
+what everything is, and they'll make sure they've covered every time zone in the world.
+
+27
+00:01:40,739 --> 00:01:42,619
+And then Autumn will come along.
+
+28
+00:01:42,620 --> 00:01:44,620
+And they'll get a call from England.
+
+29
+00:01:44,620 --> 00:01:49,540
+And England will say "Excuse me. Um, we're an hour out at the minute, what's going on?"
+
+30
+00:01:49,540 --> 00:01:51,540
+"Hold on the clock's just changed!"
+
+31
+00:01:51,540 --> 00:01:53,960
+"That's fine - no, we dealt with that."
+
+32
+00:01:53,959 --> 00:01:58,399
+"We made a note of when daylight savings changes for us, and we've put that in!"
+
+33
+00:01:58,400 --> 00:02:03,260
+And England will say "No, see daylight savings changes a week earlier for us."
+
+34
+00:02:03,260 --> 00:02:05,260
+"It's different depending on where you live."
+
+35
+00:02:05,260 --> 00:02:08,659
+"We shift our clocks back a week before you do."
+
+36
+00:02:08,659 --> 00:02:10,659
+And at that point
+
+37
+00:02:10,659 --> 00:02:14,020
+generally the programmer will start to hold their head in their hands
+
+38
+00:02:14,020 --> 00:02:16,240
+and realise what they've gotten themselves into.
+
+39
+00:02:16,240 --> 00:02:18,240
+And that's fine! They'll put that in
+
+40
+00:02:18,240 --> 00:02:22,620
+and they will deal with each country shifting to daylight savings time on a different day.
+
+41
+00:02:22,620 --> 00:02:27,060
+They'll look at the file that tells them how to do that and they'll copy all that in.
+
+42
+00:02:27,659 --> 00:02:30,939
+Then they'll get a call from someone in the southern hemisphere again who will say
+
+43
+00:02:30,939 --> 00:02:34,680
+"Yeah we're not shifting back in the Autumn we shift forward."
+
+44
+00:02:34,680 --> 00:02:38,379
+"Our spring... is in November."
+
+45
+00:02:38,759 --> 00:02:44,599
+At that point they'll generally start looking longingly at their intoxicant of choice
+
+46
+00:02:44,599 --> 00:02:47,879
+and wondering whether they should have a quick drink before keeping going...
+
+47
+00:02:48,080 --> 00:02:50,080
+...and they'll code that in as well.
+
+48
+00:02:50,080 --> 00:02:52,540
+Then they'll get a call from Samoa.
+
+49
+00:02:52,539 --> 00:02:54,819
+Out in the Pacific on the international date line.
+
+50
+00:02:54,819 --> 00:02:57,459
+And Samoa will say "Hello!"
+
+51
+00:02:57,460 --> 00:02:59,840
+"Yeah we skipped a day the other year."
+
+52
+00:02:59,840 --> 00:03:01,840
+And the programmer will say "what?"
+
+53
+00:03:01,840 --> 00:03:10,539
+"Yeah we skipped a day. We went from December 29th, 2011 to December 31st."
+
+54
+00:03:10,539 --> 00:03:15,979
+"We shifted from one side of the international date line from being hours and hours behind Greenwich ...
+
+55
+00:03:15,979 --> 00:03:20,199
+... to being hours and hours ahead of Greenwich. Helps us with trading with Australia."
+
+56
+00:03:20,680 --> 00:03:27,140
+"Can you take account of that when you work out how many days things are, and how many seconds things are in the past?"
+
+57
+00:03:27,139 --> 00:03:33,000
+[breathing deeply] That's fine, there's a file that tells you when any country has changed its time zone.
+
+58
+00:03:33,000 --> 00:03:35,659
+It turns out that that happens fairly often.
+
+59
+00:03:35,659 --> 00:03:40,139
+But they're announced ahead of schedule so as long as you keep that file updated
+
+60
+00:03:40,139 --> 00:03:43,579
+and code that into your program's logic as well, it'll be fine.
+
+61
+00:03:43,580 --> 00:03:46,680
+Then you look back and you notice that during World War II,
+
+62
+00:03:46,680 --> 00:03:49,620
+England had double British Summer Time.
+
+63
+00:03:49,620 --> 00:03:54,240
+It went completely onto BST and then just added an extra hour.
+
+64
+00:03:54,240 --> 00:03:57,659
+So it was two hours ahead of Greenwich despite... having Greenwich.
+
+65
+00:03:57,659 --> 00:03:59,259
+That's fine you deal with that.
+
+66
+00:03:59,259 --> 00:04:02,739
+Have you noticed I've started talking as if it was you or me?
+
+67
+00:04:02,740 --> 00:04:05,960
+Because I've done this before and it's really, really frustrating.
+
+68
+00:04:05,960 --> 00:04:08,900
+And you make sure you subscribe to the list
+
+69
+00:04:08,900 --> 00:04:14,280
+of when countries are going to change their time zones - which happens, apparently, many times!
+
+70
+00:04:14,280 --> 00:04:18,939
+Like, sometimes, several times in a year because governments change over.
+
+71
+00:04:18,939 --> 00:04:22,579
+And then this mythical programmer gets a call from Libya;
+
+72
+00:04:22,579 --> 00:04:28,599
+who in 2013, with only a couple of days' notice, decided that they weren't going to put the clocks back.
+
+73
+00:04:28,740 --> 00:04:34,019
+With enough notice that it wasn't possible for anyone to get the update out in time.
+
+74
+00:04:34,019 --> 00:04:38,519
+Meaning that every Libyan computer, no matter what operating system it ran...
+
+75
+00:04:38,519 --> 00:04:40,519
+... was an hour out.
+
+76
+00:04:41,079 --> 00:04:45,659
+That's OK, you read the news article about that and you hurriedly code that in as well.
+
+77
+00:04:45,660 --> 00:04:49,260
+And then, then you get a call from the West Bank.
+
+78
+00:04:49,259 --> 00:04:56,079
+Where the Israeli population is on a different time zone to the Palestinian population.
+
+79
+00:04:56,079 --> 00:04:59,219
+Because one is following Israel and one isn't.
+
+80
+00:04:59,220 --> 00:05:05,080
+Now you have two populations of people in the same location who are following different time zones.
+
+81
+00:05:05,079 --> 00:05:11,639
+And now they're all having to ask themselves whether they're on this time zone or this one, depending on who they are and where they are
+
+82
+00:05:11,639 --> 00:05:14,399
+And there's no way to code that into your program! And then...
+
+83
+00:05:14,399 --> 00:05:17,639
+Then you get a call from the historian.
+
+84
+00:05:17,639 --> 00:05:23,899
+Who says "Right, I'm trying to calculate some times back in the 18th century."
+
+85
+00:05:23,899 --> 00:05:29,060
+"And we changed from the Julian calendar to the Gregorian calendar."
+
+86
+00:05:29,060 --> 00:05:32,120
+"It's not that we lost about three weeks ...
+
+87
+00:05:32,120 --> 00:05:37,259
+... it's just that we skipped right from this date to this date, and missed the others."
+
+88
+00:05:38,040 --> 00:05:42,760
+"Can you code it so that it just kind of works that out for me?"
+
+89
+00:05:43,240 --> 00:05:47,319
+It's fine because someone has already told you when those dates are,
+
+90
+00:05:47,319 --> 00:05:49,659
+and you can code that into your program's logic as well
+
+91
+00:05:49,660 --> 00:05:52,240
+but now it's looking really, long and really complicated
+
+92
+00:05:52,240 --> 00:05:55,800
+and it's a tangled mess of spaghetti code that somehow works
+
+93
+00:05:55,800 --> 00:05:58,620
+and then you get a call from the Russian historian!
+
+94
+00:05:58,620 --> 00:06:03,360
+Who says "Yeah, we only changed to the Gregorian calendar in the 20th century ...
+
+95
+00:06:03,360 --> 00:06:08,300
+... and it turns out the dates you've skipped change depending on your location ...
+
+96
+00:06:08,300 --> 00:06:11,319
+... and can you deal with that as well?" And then you get a call from the British historian!
+
+97
+00:06:11,319 --> 00:06:15,139
+Who says that until, I think it was the 16th century ...
+
+98
+00:06:15,139 --> 00:06:19,240
+the year started on the March 25th!
+
+99
+00:06:19,699 --> 00:06:21,500
+Just to blow your mind there.
+
+100
+00:06:21,500 --> 00:06:26,300
+From March 24th, 924
+
+101
+00:06:26,300 --> 00:06:31,340
+and then it would be March 25th, 925. And that is the next day.
+
+102
+00:06:31,339 --> 00:06:39,119
+Because you have gone from December 31st, 924, to January 1st, 924 because it goes in that order!
+
+103
+00:06:39,120 --> 00:06:41,240
+It's massively complicated, AND THEN...
+
+104
+00:06:41,240 --> 00:06:44,240
+You get the call from the astrophysicist...
+
+105
+00:06:44,240 --> 00:06:48,519
+Who says "By the way, we just had a leap second!"
+
+106
+00:06:48,899 --> 00:06:52,219
+And at this point, you just kind of go "... what?!"
+
+107
+00:06:52,220 --> 00:06:56,500
+Leap seconds; because the Earth does not rotate at a constant speed.
+
+108
+00:06:56,500 --> 00:07:00,259
+It slows down, it speeds up, as tectonic plates move about
+
+109
+00:07:00,259 --> 00:07:04,800
+and magnetic fields shift, or something like that. And so occasionally
+
+110
+00:07:04,800 --> 00:07:10,139
+the International Astronomical Union will work out whether we need a leap second.
+
+111
+00:07:10,139 --> 00:07:16,639
+If you do, the clocks go 23:59:58
+
+112
+00:07:16,639 --> 00:07:19,139
+and then it's 23:59:59
+
+113
+00:07:19,139 --> 00:07:23,680
+and then instead of going [00:00:00] like any sensible time zone would
+
+114
+00:07:23,680 --> 00:07:26,840
+it goes 23:59:60!
+
+115
+00:07:26,839 --> 00:07:31,599
+And everything breaks because suddenly you have 61 seconds in a minute!
+
+116
+00:07:31,600 --> 00:07:35,120
+So depending on your implementation, either ...
+
+117
+00:07:35,120 --> 00:07:39,160
+... your clock gets one second out of sync with the rest of the world
+
+118
+00:07:39,160 --> 00:07:41,560
+or it repeats a second.
+
+119
+00:07:41,560 --> 00:07:46,019
+The way you're meant to deal with this is with something called the Unix Timestamp.
+
+120
+00:07:46,019 --> 00:07:48,959
+And Numberphile, I think, has talked about this before.
+
+121
+00:07:48,959 --> 00:07:54,680
+That you have this number that started on the first exact second of 1970
+
+122
+00:07:54,680 --> 00:07:57,620
+and increments one second, per second.
+
+123
+00:07:57,620 --> 00:08:00,720
+Constantly. Tick. Tick. Tick.
+
+124
+00:08:00,720 --> 00:08:05,840
+And that's great because what you're meant to do is take whatever date has been given to you,
+
+125
+00:08:05,839 --> 00:08:08,199
+and you calculate that as a Unix Timestamp,
+
+126
+00:08:08,199 --> 00:08:10,199
+and you put that into your database.
+
+127
+00:08:10,199 --> 00:08:12,519
+And that'll just deal with leap seconds
+
+128
+00:08:12,519 --> 00:08:14,579
+EXCEPT IT DOESN'T! Of course it doesn't!
+
+129
+00:08:14,579 --> 00:08:18,500
+Because you have Universal Coordinated Time
+
+130
+00:08:18,500 --> 00:08:21,019
+which includes leap seconds!
+
+131
+00:08:21,019 --> 00:08:24,500
+It repeats occasionally, and it just includes 23:59:60
+
+132
+00:08:24,500 --> 00:08:28,459
+and then you have astronomical time! Which does not include leap seconds
+
+133
+00:08:28,459 --> 00:08:31,379
+and has steadily been getting out of sync with the rest of the world
+
+134
+00:08:31,379 --> 00:08:34,700
+because we need to look at the stars and design telescopes around it!
+
+135
+00:08:34,700 --> 00:08:36,580
+[deep sigh]
+
+136
+00:08:36,580 --> 00:08:38,320
+And what you learn...
+
+137
+00:08:38,320 --> 00:08:42,879
+What you learn after dealing with time zones, is that what you do ...
+
+138
+00:08:42,879 --> 00:08:45,000
+... is you put away your code ...
+
+139
+00:08:45,000 --> 00:08:47,539
+... you don't try and write anything to deal with this.
+
+140
+00:08:47,539 --> 00:08:50,539
+You look at the people who have been there before you.
+
+141
+00:08:50,539 --> 00:08:54,480
+You look at the first people, the people who have dealt with this before,
+
+142
+00:08:54,480 --> 00:08:56,480
+the people who have built the spaghetti code,
+
+143
+00:08:56,480 --> 00:09:00,860
+and you thank them very much for making it open source,
+
+144
+00:09:00,860 --> 00:09:05,519
+and you give them credit, and you take what they have made and you put it in your program,
+
+145
+00:09:05,519 --> 00:09:08,079
+and you never ever look at it again.
+
+146
+00:09:08,080 --> 00:09:11,320
+Because that way lies madness.
+
+147
+00:09:16,000 --> 00:09:20,440
+Google actually has a really, really good approach to leap seconds that they invented themselves.
+
+148
+00:09:20,440 --> 00:09:23,640
+There's an article about it on their blog, I think, that explains it.
+
+149
+00:09:23,639 --> 00:09:25,939
+They do something called a "leap smear."
+
+150
+00:09:25,940 --> 00:09:28,980
+Because having 61 seconds in a minute,
+
+151
+00:09:28,980 --> 00:09:31,820
+or because having a clock tick back a second,
+
+152
+00:09:31,820 --> 00:09:36,620
+can be really, really bad for massive agencies that have to
+
+153
+00:09:36,620 --> 00:09:42,500
+synchronise everything really precisely and have to trust that one bit of data was stored before another,
+
+154
+00:09:42,500 --> 00:09:46,299
+they essentially smear the second out over the whole day.
+
+155
+00:09:46,299 --> 00:09:49,659
+They increase their clock by a microsecond at a time.
+
+156
+00:09:49,659 --> 00:09:52,319
+Tick tick tick, all the way through the day.
+
+157
+00:09:52,320 --> 00:09:56,420
+So that it's, sometimes maybe even half a second out from reality,
+
+158
+00:09:56,419 --> 00:09:59,519
+but as long as everything on their servers is half a second out.
+
+159
+00:09:59,519 --> 00:10:07,279
+It's built to be out of sync with the world, as long as it knows that one thing happened before another.
+
+160
+00:10:07,279 --> 00:10:12,120
+Having continuity is more important than actually having accurate time.
+

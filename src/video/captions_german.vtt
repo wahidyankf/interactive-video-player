@@ -1,0 +1,642 @@
+WEBVTT
+
+1
+00:00:00,420 --> 00:00:04,820
+Früher oder später muss jeder Programmierer einmal mit Zeitzonen fertig werden.
+
+2
+00:00:04,839 --> 00:00:09,780
+Und ich kann hier wenig Unterstützung bieten; Ich kann eine belehrende Geschichte erzählen.
+
+3
+00:00:09,779 --> 00:00:16,600
+Ich kann erklären, warum man niemals mit Zeitzonen arbeiten sollte, wenn man es vermeiden kann.
+
+4
+00:00:18,440 --> 00:00:21,560
+Nehmen wir an, dass jemand ein Programm geschrieben hat,
+
+5
+00:00:21,559 --> 00:00:25,919
+das ausrechnet, wie viele Sekunden ein Ereignis in der Vergangenheit liegt.
+
+6
+00:00:25,920 --> 00:00:29,500
+Man gibt ein Datum und eine Uhrzeit ein, und es berechnet die Anzahl der Sekunden.
+
+7
+00:00:29,500 --> 00:00:32,859
+Und man guckt sich das an und denkt: "OK, das funktioniert ganz gut für mich..."
+
+8
+00:00:32,859 --> 00:00:36,159
+"Aber lass uns eine kleine Box hinzufügen, mit der man die Zeitzone ändern kann."
+
+9
+00:00:36,159 --> 00:00:44,619
+Wenn man also zwischen Jetzt in New York und vor fünf Tagen in London vergleicht, dann kann man das ausrechnen.
+
+10
+00:00:44,619 --> 00:00:50,780
+Und das ist gut - das kleine Auswahlfeld lässt einen auswählen, wie viele Stunden vor oder nach Greenwich man ist.
+
+11
+00:00:50,780 --> 00:00:51,620
+Brilliant.
+
+12
+00:00:51,619 --> 00:00:56,239
+Früher oder später, nachdem das Programm etwas bekannter geworden ist, wird man einen Anruf aus Australien erhalten.
+
+13
+00:00:56,240 --> 00:00:58,020
+Und Australien wird sagen: "Servus--"
+
+14
+00:00:58,020 --> 00:01:00,359
+-- Ich werde keine Akzente versuchen.
+
+15
+00:01:00,359 --> 00:01:02,359
+Ich sollte einfach keine Akzente sprechen.
+
+16
+00:01:02,359 --> 00:01:04,679
+Australien wird sagen: "Hallo!"
+
+17
+00:01:04,680 --> 00:01:09,640
+"Nur am Rande, wir sind 9½ Stunden vor Greenwich."
+
+18
+00:01:09,640 --> 00:01:11,640
+Und der Programmierer wird sagen: "wirklich?"
+
+19
+00:01:11,640 --> 00:01:13,079
+"Ja, 9½ Stunden."
+
+20
+00:01:13,079 --> 00:01:16,019
+"OK, ich werde einen Sonderfall für Sie hinzufügen. Ist gut."
+
+21
+00:01:16,019 --> 00:01:18,799
+Ein bisschen später wird man aus Nepal anrufen.
+
+22
+00:01:18,799 --> 00:01:24,179
+Und die werden sagen: "Hallo. Wir sind 5¼ Stunden vor Greenwich."
+
+23
+00:01:24,180 --> 00:01:28,580
+Und man wird sagen: "wirklich?" "Ja, so ist das schon ewig! Ja, 5¼ Stunden!"
+
+24
+00:01:28,579 --> 00:01:31,899
+Gut. Okay. Und man wird einen Sonderfall hinzufügen. Und vielleicht wird man auch
+
+25
+00:01:31,900 --> 00:01:35,760
+eine Liste von Zeitzonen nachschlagen. Die offizielle Liste, die einem verrät,
+
+26
+00:01:35,760 --> 00:01:40,400
+was jeder ist, und man wird sicher gehen, dass alle Zeitzonen der Welt vorhanden sind.
+
+27
+00:01:40,739 --> 00:01:42,619
+Und dann wird der Herbst kommen.
+
+28
+00:01:42,620 --> 00:01:44,620
+Und man wird einen Anruf aus England erhalten.
+
+29
+00:01:44,620 --> 00:01:49,540
+Und England wird sagen: "Entschuldigen Sie. Nun, wir liegen aktuell eine Stunde daneben, was ist passiert?"
+
+30
+00:01:49,540 --> 00:01:51,540
+"Moment, die Uhren haben sich gerade geändert!"
+
+31
+00:01:51,540 --> 00:01:53,960
+"Schon gut - nein, das wussten wir."
+
+32
+00:01:53,959 --> 00:01:58,399
+"Wir haben eine Notiz gemacht, wann die Winterzeit einsetzt, und wir haben das eingebaut!"
+
+33
+00:01:58,400 --> 00:02:03,260
+Und England wird sagen: "Nein, sehen Sie, die Winterzeit beginnt für uns eine Woche früher."
+
+34
+00:02:03,260 --> 00:02:05,260
+"Es ist unterschiedlich, je nachdem wo man lebt."
+
+35
+00:02:05,260 --> 00:02:08,659
+"Wir stellen unsere Uhren eine Woche vor Ihnen zurück."
+
+36
+00:02:08,659 --> 00:02:10,659
+Und an diesem Punkt
+
+37
+00:02:10,659 --> 00:02:14,020
+wird der Programmierer generell anfangen, sein Gesicht in den Händen zu vergraben
+
+38
+00:02:14,020 --> 00:02:16,240
+und zu realisieren, wo er da hinein geraten ist.
+
+39
+00:02:16,240 --> 00:02:18,240
+Aber das ist Okay! Man wird das einbauen,
+
+40
+00:02:18,240 --> 00:02:22,620
+und man wird davon ausgehen, dass jedes Land an einem anderen Tag die Zeit umstellt.
+
+41
+00:02:22,620 --> 00:02:27,060
+Man wird sich die Datei angucken, die einem zeigt, wie das geht, und man wird das hinein kopieren.
+
+42
+00:02:27,659 --> 00:02:30,939
+Dann wird man wieder einen Anruf erhalten von jemandem aus der südlichen Hemisphäre, der sagen wird
+
+43
+00:02:30,939 --> 00:02:34,680
+"Naja, wir stellen die Uhren im Herbst nicht zurück, wir stellen sie vorwärts."
+
+44
+00:02:34,680 --> 00:02:38,379
+"Unser Frühling... ist im November."
+
+45
+00:02:38,759 --> 00:02:44,599
+An diesem Punkt wird man sehnsüchtig das Rauschmittel seiner Wahl in Blick nehmen
+
+46
+00:02:44,599 --> 00:02:47,879
+und sich fragen, ob man nicht einen kleinen Schluck nehmen sollte, bevor man weiter macht...
+
+47
+00:02:48,080 --> 00:02:50,080
+...und man wird auch das einprogrammieren.
+
+48
+00:02:50,080 --> 00:02:52,540
+Dann wird man einen Anruf aus Samoa bekommen.
+
+49
+00:02:52,539 --> 00:02:54,819
+Draußen im Pazifik, auf der internationalen Datumsgrenze.
+
+50
+00:02:54,819 --> 00:02:57,459
+Und Samoa wird sagen: "Hallo!"
+
+51
+00:02:57,460 --> 00:02:59,840
+"Nun ja, wir haben neulich einen Tag übersprungen."
+
+52
+00:02:59,840 --> 00:03:01,840
+Und der Programmierer wird sagen: "was?"
+
+53
+00:03:01,840 --> 00:03:10,539
+"Ja, wir haben einen Tag übersprungen. Wir sind vom 29. Dezember 2011 zum 31. Dezember gesprungen."
+
+54
+00:03:10,539 --> 00:03:15,979
+"Wir haben von der einen Seite der internationalen Datumsgrenze, wo wir Stunden um Stunden hinter Greenwich waren...
+
+55
+00:03:15,979 --> 00:03:20,199
+...zu der anderen Seite, wo wir Stunden um Stunden vor Greenwich sind, gewechselt. Das hilft uns beim Handel mit Australien."
+
+56
+00:03:20,680 --> 00:03:27,140
+"Können Sie das berücksichtigen, wenn Sie berechnen, wie viele Tage etwas sind und wie viele Sekunden etwas in der Vergangenheit liegt?"
+
+57
+00:03:27,139 --> 00:03:33,000
+[Tiefer Atemzug] Das ist in Ordnung, es gibt eine Datei, die auflistet, wann welches Land die Zeitzone gewechselt hat.
+
+58
+00:03:33,000 --> 00:03:35,659
+Tatsächlich passiert das relativ oft.
+
+59
+00:03:35,659 --> 00:03:40,139
+Aber das wird immer frühzeitig angekündigt, solange man also die Datei aktuell hält
+
+60
+00:03:40,139 --> 00:03:43,579
+und das in den Code einbaut, ist alles gut.
+
+61
+00:03:43,580 --> 00:03:46,680
+Dann schaut man zurück und bemerkt, dass England während des zweiten Weltkrieges
+
+62
+00:03:46,680 --> 00:03:49,620
+eine doppelte Sommerzeit hatte.
+
+63
+00:03:49,620 --> 00:03:54,240
+Man sprang auf die britische Sommerzeit und fügte dann einfach eine extra Stunde hinzu.
+
+64
+00:03:54,240 --> 00:03:57,659
+Also war man zwei Stunden vor Greenwich, obwohl... man selber Greenwich hatte.
+
+65
+00:03:57,659 --> 00:03:59,259
+Das ist in Ordnung, man baut das ein.
+
+66
+00:03:59,259 --> 00:04:02,739
+Haben Sie bemerkt, wie ich begonnen habe, so zu reden, als könnten das Sie oder ich sein?
+
+67
+00:04:02,740 --> 00:04:05,960
+Denn ich hab das schon mal getan, und es war sehr sehr frustrierend.
+
+68
+00:04:05,960 --> 00:04:08,900
+Und man stellt sicher, dass man die Liste aktuell hält,
+
+69
+00:04:08,900 --> 00:04:14,280
+in der steht, wann Länder ihre Zeitzonen ändern - was anscheinend öfters passiert!
+
+70
+00:04:14,280 --> 00:04:18,939
+Sogar manchmal mehrmals pro Jahr, weil sich Regierungen ändern.
+
+71
+00:04:18,939 --> 00:04:22,579
+Und dann bekommt dieser mythische Programmierer einen Anruf aus Libyen;
+
+72
+00:04:22,579 --> 00:04:28,599
+die 2013, mit nur ein paar Tagen Vorwarnung, entschieden, die Uhren nicht zurückzustellen.
+
+73
+00:04:28,740 --> 00:04:34,019
+Mit gerade genug Vorwarnung, dass es für niemanden möglich war rechtzeitig ein Update zu veröffentlichen.
+
+74
+00:04:34,019 --> 00:04:38,519
+Was bedeutete, dass jeder libysche Computer, egal mit welchem Betriebssystem,
+
+75
+00:04:38,519 --> 00:04:40,519
+eine Stunde falsch ging.
+
+76
+00:04:41,079 --> 00:04:45,659
+Das ist OK, man liest darüber in den Nachrichten und programmiert das hastig ein.
+
+77
+00:04:45,660 --> 00:04:49,260
+Und dann, dann bekommt man einen Anruf aus dem Westjordanland.
+
+78
+00:04:49,259 --> 00:04:56,079
+Wo die israelische Bevölkerung in einer anderen Zeitzone ist als die palästinensische.
+
+79
+00:04:56,079 --> 00:04:59,219
+Weil einer Israel folgt und einer nicht.
+
+80
+00:04:59,220 --> 00:05:05,080
+Jetzt hat man zwei Gruppen von Menschen am selben Ort, die unterschiedlichen Zeitzonen folgen.
+
+81
+00:05:05,079 --> 00:05:11,639
+Und es müssen immer alle wissen, ob sie in der einen Zeitzone sind oder in der anderen, je nachdem wer sie sind und wo sie sind.
+
+82
+00:05:11,639 --> 00:05:14,399
+Und es ist unmöglich, das in sein Programm einzubauen! Und dann...
+
+83
+00:05:14,399 --> 00:05:17,639
+Dann bekommt man einen Anruf von einem Historiker.
+
+84
+00:05:17,639 --> 00:05:23,899
+Er sagt: "So, ich versuche ein paar Zeitspannen im 18. Jahrhundert zu berechnen."
+
+85
+00:05:23,899 --> 00:05:29,060
+"Und wir haben vom Julianischen Kalender zum Gregorianischen Kalender gewechselt."
+
+86
+00:05:29,060 --> 00:05:32,120
+"Es ist nicht so, dass wir ungefähr drei Wochen verloren hätten ...
+
+87
+00:05:32,120 --> 00:05:37,259
+... es ist nur, dass wir geradewegs von diesem Tag zu diesem gesprungen sind, und die anderen verpasst haben."
+
+88
+00:05:38,040 --> 00:05:42,760
+"Können Sie es so programmieren, dass es das für mich quasi einberechnet?"
+
+89
+00:05:43,240 --> 00:05:47,319
+Es ist in Ordnung, weil einem schon jemand gesagt hat, wann diese Daten waren,
+
+90
+00:05:47,319 --> 00:05:49,659
+und man kann es einfach in seinen Code einbauen.
+
+91
+00:05:49,660 --> 00:05:52,240
+Aber nun sieht alles sehr sehr lang und kompliziert aus
+
+92
+00:05:52,240 --> 00:05:55,800
+und es ist ein verworrenes Chaos von Spaghetti Code der irgendwie funktioniert.
+
+93
+00:05:55,800 --> 00:05:58,620
+Und dann erhält man einen Anruf von einem russischen Historiker!
+
+94
+00:05:58,620 --> 00:06:03,360
+Er sagt: "Nun, wir verwenden den Gregorianischen Kalender erst seit dem 20. Jahrhundert ...
+
+95
+00:06:03,360 --> 00:06:08,300
+... und es stellt sich heraus, dass sich die übersprungenen Tage unterscheiden je nach Standort ...
+
+96
+00:06:08,300 --> 00:06:11,319
+... und kommen Sie damit auch klar?" Und dann bekommen Sie einen Anruf von einem britischen Historiker!
+
+97
+00:06:11,319 --> 00:06:15,139
+Der erklärt, dass bis, ich glaube es war das 16. Jahrhundert, ...
+
+98
+00:06:15,139 --> 00:06:19,240
+das Jahr am 25. März begann!
+
+99
+00:06:19,699 --> 00:06:21,500
+Nur um einen völlig zu verwirren.
+
+100
+00:06:21,500 --> 00:06:26,300
+Vom 24. März 924
+
+101
+00:06:26,300 --> 00:06:31,340
+ging man zum 25. März 925. Und das war dann der nächste Tag.
+
+102
+00:06:31,339 --> 00:06:39,119
+Denn man war vom 31. Dezember 924 zum 1. Januar 924 gegangen, das war einfach die Reihenfolge!
+
+103
+00:06:39,120 --> 00:06:41,240
+Es ist unglaublich kompliziert, UND DANN...
+
+104
+00:06:41,240 --> 00:06:44,240
+Bekommt man den Anruf vom Astrophysiker...
+
+105
+00:06:44,240 --> 00:06:48,519
+Der sagt: "Nur am Rande, wir hatten gerade eine Schaltsekunde!"
+
+106
+00:06:48,899 --> 00:06:52,219
+Und an diesem Punkt sagt man nur noch: "... was?!"
+
+107
+00:06:52,220 --> 00:06:56,500
+Schaltsekunden; denn die Erde rotiert nicht mit einer konstanten Geschwindigkeit.
+
+108
+00:06:56,500 --> 00:07:00,259
+Sie wird langsamer, schneller, während Tektonische Platten sich bewegen
+
+109
+00:07:00,259 --> 00:07:04,800
+und magnetische Felder sich verschieben, oder irgendwie so. Und somit wird gelegentlich
+
+110
+00:07:04,800 --> 00:07:10,139
+von der Internationalen Astronomischen Union entschieden, dass wieder eine Schaltsekunde benötigt wird.
+
+111
+00:07:10,139 --> 00:07:16,639
+Und wenn das der Fall ist, zeigen die Uhren 23:59:58
+
+112
+00:07:16,639 --> 00:07:19,139
+und dann 23:59:59
+
+113
+00:07:19,139 --> 00:07:23,680
+und dann, anstelle von 00:00:00, wie jede normale Zeitzone,
+
+114
+00:07:23,680 --> 00:07:26,840
+zeigen sie 23:59:60!
+
+115
+00:07:26,839 --> 00:07:31,599
+Und alles geht schief, denn plötzlich gibt es 61 Sekunden in einer Minute!
+
+116
+00:07:31,600 --> 00:07:35,120
+Abhängig von der Implementation wird die eigene Uhr also entweder ...
+
+117
+00:07:35,120 --> 00:07:39,160
+... um eine Sekunde aus dem Takt mit dem Rest der Welt geraten
+
+118
+00:07:39,160 --> 00:07:41,560
+oder eine Sekunde wiederholen.
+
+119
+00:07:41,560 --> 00:07:46,019
+Man verhindert das, indem man etwas verwendet, was sich Unix Zeit nennt.
+
+120
+00:07:46,019 --> 00:07:48,959
+Und Numberphile hat, soweit ich weiß, darüber schon mal ein Video gemacht.
+
+121
+00:07:48,959 --> 00:07:54,680
+Man hat diese Zahl, die in der allerersten Sekunde des Jahres 1970 begann
+
+122
+00:07:54,680 --> 00:07:57,620
+und jede Sekunde um eine Sekunde erhöht wird.
+
+123
+00:07:57,620 --> 00:08:00,720
+Konstant. Tick. Tick. Tick.
+
+124
+00:08:00,720 --> 00:08:05,840
+Und das ist prima, denn was man erreichen wollte, war, dass man das Datum nimmt, welches man bekommen hat
+
+125
+00:08:05,839 --> 00:08:08,199
+und den zugehörigen Unix Zeitstempel berechnet
+
+126
+00:08:08,199 --> 00:08:10,199
+und diesen in der Datenbank hinterlegt.
+
+127
+00:08:10,199 --> 00:08:12,519
+Und das wird einfach mit Schaltsekunden fertig werden.
+
+128
+00:08:12,519 --> 00:08:14,579
+TUT ES ABER NICHT! Natürlich nicht!
+
+129
+00:08:14,579 --> 00:08:18,500
+Denn es handelt sich um die Universal Coordinated Time,
+
+130
+00:08:18,500 --> 00:08:21,019
+die Schaltsekunden enthält!
+
+131
+00:08:21,019 --> 00:08:24,500
+Die Unix Zeit wiederholt gelegentlich eine Sekunde und schließt einfach 23:59:60 ein.
+
+132
+00:08:24,500 --> 00:08:28,459
+Und dann gibt es die Astronomische Zeit! Die enthält keine Schaltsekunden
+
+133
+00:08:28,459 --> 00:08:31,379
+und ist langsam aber sicher mit dem Rest der Welt aus dem Gleichgewicht geraten,
+
+134
+00:08:31,379 --> 00:08:34,700
+denn wir müssen die Sterne beobachten und Teleskope danach bauen!
+
+135
+00:08:34,700 --> 00:08:36,580
+[Tiefer Seufzer]
+
+136
+00:08:36,580 --> 00:08:38,320
+Und was man lernt...
+
+137
+00:08:38,320 --> 00:08:42,879
+Was man lernt, nachdem man mit Zeitzonen gearbeitet hat,
+
+138
+00:08:42,879 --> 00:08:45,000
+ist, dass man seinen Code wegtut ...
+
+139
+00:08:45,000 --> 00:08:47,539
+... man gar nicht erst versucht, selbst damit klar zu kommen.
+
+140
+00:08:47,539 --> 00:08:50,539
+Man guckt nach den Leuten, die das Problem vor einem hatten.
+
+141
+00:08:50,539 --> 00:08:54,480
+Man guckt nach den ersten Leuten, den Leuten, die das alles schon mal gelöst haben,
+
+142
+00:08:54,480 --> 00:08:56,480
+den Leuten, die den Spaghetti Code geschrieben haben,
+
+143
+00:08:56,480 --> 00:09:00,860
+und man dankt ihnen sehr dafür, dass sie es öffentlich gemacht haben,
+
+144
+00:09:00,860 --> 00:09:05,519
+und man gibt ihnen Anerkennung, nimmt was sie bereits getan haben, packt es in sein Programm
+
+145
+00:09:05,519 --> 00:09:08,079
+und schaut es sich nie wieder an.
+
+146
+00:09:08,080 --> 00:09:11,320
+Denn auf dem Weg liegt Wahnsinn.
+
+147
+00:09:16,000 --> 00:09:20,440
+Google hat tatsächlich einen sehr guten Ansatz für Schaltsekunden, den sie selbst erfunden haben.
+
+148
+00:09:20,440 --> 00:09:23,640
+Es gibt einen Artikel in ihrem Blog, ich glaube, der erklärt es.
+
+149
+00:09:23,639 --> 00:09:25,939
+Sie machen etwas namens "leap smear".
+
+150
+00:09:25,940 --> 00:09:28,980
+Weil 61 Sekunden in der Minute zu haben
+
+151
+00:09:28,980 --> 00:09:31,820
+oder die Uhr eine Sekunde wiederholen zu lassen
+
+152
+00:09:31,820 --> 00:09:36,620
+sehr sehr schlecht sein kann für riesige Agenturen,
+
+153
+00:09:36,620 --> 00:09:42,500
+die alles sehr präzise synchronisieren müssen und darauf vertrauen müssen, dass alles in der richtigen Reihenfolge gespeichert wird,
+
+154
+00:09:42,500 --> 00:09:46,299
+verteilt Google die Sekunde quasi über den gesamten Tag.
+
+155
+00:09:46,299 --> 00:09:49,659
+Sie fügen Mikrosekunde für Mikrosekunde hinzu.
+
+156
+00:09:49,659 --> 00:09:52,319
+Tick tick tick, den ganzen Tag lang.
+
+157
+00:09:52,320 --> 00:09:56,420
+Sodass sie zwar manchmal bis zu einer halben Sekunde neben der Realität liegen,
+
+158
+00:09:56,419 --> 00:09:59,519
+aber währenddessen alles andere auf ihrem Server auch eine halbe Sekunde falsch geht.
+
+159
+00:09:59,519 --> 00:10:07,279
+Es ist gebaut um mit der Welt asynchron zu sein, solange sicher ist, dass alles in der richtigen Reihenfolge passiert.
+
+160
+00:10:07,279 --> 00:10:12,120
+Kontinuität ist in dem Fall wichtiger als genaue Zeitmessung.
+
