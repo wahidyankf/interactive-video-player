@@ -1,0 +1,16 @@
+.videoWrapper {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mejs__poster {
+  max-width: 100%;
+}
+
+.mejs__overlay-button {
+  @media screen and (max-width: 767px){
+    display: none; 
+  }
+}
