@@ -3,15 +3,25 @@
 ## Introduction
 
 In this project, I created a HTML5 interactive video player using [mediaelementjs](http://www.mediaelementjs.com/) library. This interactive video player has these features:
-1. Play/pause button
+
+1. Play/Pause button
+
 2. Current time and total duration
+
 3. Playing progress slider
+
 4. File buffer's progress
+
 5. Skip backward
+
 6. Playback speed chooser
+
 7. Captions chooser
+
 8. Video quality chooser
+
 9. Volume level slider
+
 10. Go to fullscreen button
 
 ### Demo pages
