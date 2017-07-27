@@ -74,7 +74,7 @@ gulp.task('copyAudio', function(){
 });
 
 gulp.task('copyVideo', function(){
-    return gulp.src(options.src + '/video')
+    return gulp.src(options.src + '/video/**')
         .pipe(gulp.dest(options.dist + '/video'));
 });
 
