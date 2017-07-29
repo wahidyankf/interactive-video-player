@@ -78,11 +78,17 @@ gulp.task('copyVideo', function(){
         .pipe(gulp.dest(options.dist + '/video'));
 });
 
+gulp.task('copyLibs', function(){
+    return gulp.src(options.src + '/libs/**')
+        .pipe(gulp.dest(options.dist + '/libs'));
+});
+
 gulp.task('build', ['html'], function(){
     gulp.start('copyImage');
     gulp.start('copyFonts');
     gulp.start('copyAudio');
     gulp.start('copyVideo');
+    gulp.start('copyLibs');
 });
 
 gulp.task('default', ['clean'], function(){
