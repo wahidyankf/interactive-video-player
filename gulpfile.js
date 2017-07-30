@@ -83,12 +83,18 @@ gulp.task('copyLibs', function(){
         .pipe(gulp.dest(options.dist + '/libs'));
 });
 
+gulp.task('copyCsssvg', function(){
+    return gulp.src(options.src + '/css/**/*.svg')
+        .pipe(gulp.dest(options.dist + '/css'));
+});
+
 gulp.task('build', ['html'], function(){
     gulp.start('copyImage');
     gulp.start('copyFonts');
     gulp.start('copyAudio');
     gulp.start('copyVideo');
     gulp.start('copyLibs');
+    gulp.start('copyCsssvg');
 });
 
 gulp.task('default', ['clean'], function(){
